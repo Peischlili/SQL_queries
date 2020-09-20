@@ -1,4 +1,4 @@
-# SQL
+# SQL and TSQL
 In this repository we find all kinds of SQL-like queries, stocked procedures and projects using other programming languages to execute SQL.
 
 This repository contains 5 queries that answer to the 5 following questions using 2 databases: 
