@@ -1,5 +1,5 @@
 # SQL and TSQL
-In this repository we find all kinds of SQL-like queries, stocked procedures and projects using other programming languages to execute SQL.
+In this repository we find all kinds of SQL-like queries and stocked procedures.
 
 This repository contains 5 queries that answer to the 5 following questions using 2 databases: 
   - WideWorldImporters (sample databases for Microsoft SQL)
