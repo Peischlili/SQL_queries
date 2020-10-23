@@ -1,20 +1,20 @@
 # SQL and TSQL
 In this repository we find all kinds of SQL-like queries and stocked procedures.
 
-This repository contains 5 queries that answer to the 5 following questions using 2 databases: 
-  - WideWorldImporters (sample databases for Microsoft SQL)
-  - SQLPlayground database (bak file)
+## This repository contains 5 queries that answer to the 5 following questions using 2 databases: 
+  * WideWorldImporters (sample databases for Microsoft SQL)
+  * SQLPlayground database (bak file)
   
 These queries are written and executed in Microsoft SQL Server.
 
-Question 1:
+## Question 1:
 Using the database WideWorldImporters, write a SQL query which reports the consistency between orders and their attached invoices.
 The resultset should report for each (CustomerID, CustomerName)
- a. the total number of orders: TotalNBOrders
- b. the number of invoices converted from an order: TotalNBInvoices
- c. the total value of orders: OrdersTotalValue
- d. the total value of invoices: InvoicesTotalValue
- f. the absolute value of the difference between c - d: AbsoluteValueDifference
+ * a. the total number of orders: TotalNBOrders
+ * b. the number of invoices converted from an order: TotalNBInvoices
+ * c. the total value of orders: OrdersTotalValue
+ * d. the total value of invoices: InvoicesTotalValue
+ * f. the absolute value of the difference between c - d: AbsoluteValueDifference
  
  The resultset must be sorted by highest values of AbsoluteValueDifference, then by smallest to highest values of TotalNBOrders and CustomerName is that order.
  
@@ -23,7 +23,7 @@ We are looking for potential differences between c & d.
 BUT, you must find them consistent as the data is clean in WideWorldImporters.
 
 
-Question 2:
+## Question 2:
 For the CustomerId = 1060 (CustomerName = 'Anand Mudaliyar')
 Identify the first InvoiceLine of his first Invoice, where "first" means the lowest respective IDs, and write an update query increasing the UnitPrice of this InvoiceLine by 20.
 A re-run of the query in Q1 gives the resultset in Q2-Resultset_Corrected.csv (corrected on 15th April 2018 - Summed values in columns OrdersTotalValue & InvoicesTotalValue were incorrect) .
@@ -31,7 +31,7 @@ A re-run of the query in Q1 gives the resultset in Q2-Resultset_Corrected.csv (c
 If you haven't managed to answer Q1, add the following selection query to the previous update query: CustomerId, CustomerName, InvoiceTotal. The latter is the sum of all invoice lines for the target invoice. 
 
 
-Question 3: 
+## Question 3: 
 Using the database WideWorldImporters, write a T-SQL stored procedure called ReportCustomerTurnover.
 This procedure takes two parameters: Choice and Year, both integers.
 
@@ -51,10 +51,10 @@ NULL values in the resultsets are not acceptable and must be substituted to 0.
 All output resultsets are ordered by customer names alphabetically.
 
 
-Question 4:
+## Question 4:
 In the database WideWorldImporters, write a SQL query which reports the highest loss of money from orders not being converted into invoices, by customer category. The name and id of the customer who generated this highest loss must also be identified. The resultset is ordered by highest loss.
 You should be able to write it in pure SQL, but if too challenging, you may use T-SQL and cursors.
 
 
-Question 5:
+## Question 5:
 In the database SQLPlayground, write a SQL query selecting all the customers' data who have purchased all the products AND have bought more than 50 products in total (sum of all purchases).
